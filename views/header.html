@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-xs-6 col-sm-1">
+		<a ui-sref="home"><img class="logo" src="assets/ubicity_logo_small.png" height="60px" alt=" Ubicity Logo" /></a>
+	</div>
+	<div class="col-xs-6 col-sm-1 navbar-right">
+		<a href="http://www.ait.ac.at/cdm/" target="_ait"><img class="logo" src="assets/ait_small.jpg" height="60px" alt="AIT Logo" /></a>
+	</div>
+</div>
+<div class="navigation">
+	<div class="btn-group">
+		<a class="btn dropdown-toggle" ng-class="{ active: $state.includes('home') }" ui-sref="home">Home</a>
+	</div>
+	<div class="btn-group">
+		<button data-toggle="dropdown" class="btn dropdown-toggle" ng-class="{ active: $state.includes('demo') }">
+			Demos &nbsp; <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li ng-class="{ active: $state.includes('demo.dashboard') }"><a ui-sref="demo.dashboard">Dashboard Demo</a></li>
+			<li ng-class="{ active: $state.includes('demo.twitter') }"><a ui-sref="demo.twitter">Twitter Data Analysis</a></li>
+			<li ng-class="{ active: $state.includes('demo.rss') }"><a ui-sref="demo.rss">RSS News Aggregation</a></li>
+		</ul>
+	</div>
+	<div class="btn-group">
+		<a class="btn dropdown-toggle" ng-class="{ active: $state.includes('resources') }" ui-sref="resources">Resources</a>
+	</div>
+</div>

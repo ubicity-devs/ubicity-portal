@@ -1,0 +1,108 @@
+a {
+	color: #B5554C;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #B5554C;
+	text-decoration: underline;
+}
+
+.btn {
+	color: #B5554C;
+}
+
+.btn-default {
+	background-color: #B5554C;
+	color: #000000;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+
+.navbar-fixed-top>.navigation>.btn-group>.dropdown-toggle {
+	height: 25px;
+	width: 150px;
+	padding: 2px 2px 2px 2px;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+/*
+ * Sticky header/footer navigation
+ */
+.navbar-fixed-bottom {
+	border: 0;
+	height: 50px;
+	background-color: #F2F2F2;
+	padding: 0px 50px 50px 50px;
+}
+
+.navbar-fixed-top {
+	border: 0;
+	height: 70px;
+	background-color: #F2F2F2;
+	padding: 5px 100px 10px 50px;
+}
+
+.navbar-fixed-top>.navigation {
+	margin-top: -35px;
+	margin-left: 200px;
+	padding-top: 15px;
+}
+
+.active {
+	font-weight: bold;
+}
+
+.navbar-fixed-top>.row>.title>h1 {
+	font-size: large;
+	font-weight: bold;
+	color: #B5554C;
+	margin: 8px;
+}
+
+.navbar-fixed-top>.row>.title>h2 {
+	font-size: medium;
+	color: #848484;
+	margin: 0px;
+	font-style: italic;
+}
+
+/*
+ * Main content
+ */
+.main {
+	padding: 10px 10px 10px 10px;
+	margin-top: 40px;
+}
+
+.main>.title {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	text-align: center;
+	color: #848484;
+}
+
+h1 {
+	font-weight: bold;
+	color: #B5554C;
+}
+
+h2 {
+	font-size: x-large;
+	color: #848484;
+	font-style: italic;
+}
+
+h3 {
+	font-weight: bold;
+	color: #848484;
+	font-size: small;
+	text-align: center;
+}

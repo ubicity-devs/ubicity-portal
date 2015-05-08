@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de" ng-app="ubicity" id="ng-app">
+<head>
+<meta charset="ISO-8859-15">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico">
+
+<title>Ubicity Portal</title>
+
+<link href="lib/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link href="lib/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+<link href="styles/styles.css" type="text/css" rel="stylesheet">
+
+<!-- Bootstrap dependencies -->
+<script src="lib/js/jquery.min.js"></script>
+<script src="lib/js/bootstrap.min.js"></script>
+
+<!-- Angular dependencies -->
+<script src="lib/js/angular.min.js"></script>
+<script src="lib/js/ui-bootstrap.min.js"></script>
+<script src="lib/js/angular-ui-router.min.js"></script>
+
+
+<!--Angular scripts -->
+<script src="scripts/app-ctrl.js"></script>
+<script src="scripts/routes.js"></script>
+</head>
+
+<body ng-controller="AppCtrl" ng-init="init()">
+	<!-- header -->
+	<div class="navbar-fixed-top" ng-include src="'views/header.html'"></div>
+	<!-- Main container for the actual information -->
+	<div id="content" ui-view class="main"></div>
+
+	<!-- sticky footer -->
+	<div class="footer navbar-fixed-bottom" ng-include src="'views/footer.html'"></div>
+</body>
+</html>
