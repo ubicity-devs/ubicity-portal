@@ -8,4 +8,11 @@ angular.module('ubicity', [ 'ui.router', 'ui.bootstrap' ]).run([ '$rootScope', '
 .controller('AppCtrl', function($rootScope, $scope) {
     $scope.init = function() {
     };
+
+    $rootScope.$on('$stateChangeStart', function(event, toState) {
+	if (toState) {
+	    ga('set', 'page', toState.url);
+	    ga('send', 'pageview');
+	}
+    });
 });
