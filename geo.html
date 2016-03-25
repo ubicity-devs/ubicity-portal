@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<title>Geo Helper</title>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.1.6/leaflet-providers.min.js"></script>
+</head>
+
+<body>
+	<div id="map"></div>
+</body>
+
+<script type="text/javascript">
+    var map = new L.Map("map", {
+	center : new L.LatLng(47.316847, 13.088968),
+	crs : L.CRS.EPSG3857,
+	zoom : 7,
+    });
+
+    $(function() {
+	$('#map').height($(document).height() * 0.95);
+	$('#map').width($(document).width() * 0.95);
+	init();
+    });
+
+    function init(options) {
+
+	// Map Providers and overlays
+	var osm = L.tileLayer.provider('OpenStreetMap.Mapnik');
+	map.addLayer(osm);
+
+	var drawControls = new L.Control.Draw({
+	    position : 'topleft'
+	});
+
+	map.on('draw:created', function(e) {
+	    alert(JSON.stringify(e.layer.toGeoJSON().geometry));
+	});
+
+	map.addControl(drawControls);
+	map.invalidateSize(false);
+    };
+</script>
