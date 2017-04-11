@@ -40,5 +40,8 @@ angular.module('ubicity').config([ '$stateProvider', '$urlRouterProvider', funct
     }).state("demo.rss", {
 	url : "/rss",
 	templateUrl : 'views/demo.rss.html'
+    }).state("demo.alerts", {
+	url : "/alerts",
+	templateUrl : 'views/demo.alerts.html'
     });
 } ]);

@@ -16,9 +16,12 @@
 		</button>
 		<ul class="dropdown-menu">
 			<li ng-class="{ active: $state.includes('demo.dashboard') }"><a ui-sref="demo.dashboard">Dashboard View</a></li>
+			<li ng-class="{ active: $state.includes('demo.rss') }"><a ui-sref="demo.rss">RSS News Aggregation</a></li>
+			<li></li>
 			<li ng-class="{ active: $state.includes('demo.twitter-geo') }"><a ui-sref="demo.twitter-geo">Geo Twitter Data Analysis</a></li>
 			<li ng-class="{ active: $state.includes('demo.twitter-topic') }"><a ui-sref="demo.twitter-topic">Twitter Topic Analysis</a></li>
-			<li ng-class="{ active: $state.includes('demo.rss') }"><a ui-sref="demo.rss">RSS News Aggregation</a></li>
+			<li></li>
+			<li ng-class="{ active: $state.includes('demo.alerts') }"><a ui-sref="demo.alerts">Alerting on Twitter Topics</a></li>
 		</ul>
 	</div>
 	<div class="btn-group">

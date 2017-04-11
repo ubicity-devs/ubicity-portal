@@ -5,8 +5,14 @@ angular.module('ubicity', [ 'ui.router', 'ui.bootstrap' ]).run([ '$rootScope', '
     $rootScope.$state = $state;
 })
 // ------------------------------------------------------------------------------------------------------
-.controller('AppCtrl', function($rootScope, $scope) {
+.controller('AppCtrl', function($rootScope, $scope, $http) {
     $scope.init = function() {
+    };
+
+    $scope.loadAlerts = function() {
+	$http.get('alert.json').then(function(res) {
+	    $scope.alertList = res.data.alerts;
+	});
     };
 
     $rootScope.$on('$stateChangeStart', function(event, toState) {
@@ -15,4 +21,5 @@ angular.module('ubicity', [ 'ui.router', 'ui.bootstrap' ]).run([ '$rootScope', '
 	    ga('send', 'pageview');
 	}
     });
+
 });
